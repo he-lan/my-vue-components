@@ -1,24 +1,38 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
 
 Vue.use(VueRouter);
+const originalPush = VueRouter.prototype.push
+   VueRouter.prototype.push = function push(location) {
+   return originalPush.call(this, location).catch(err => err)
+}
 
 const routes = [
   {
-    path: "/",
-    name: "Home",
-    component: Home
-  },
-  {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    path: '/',
+    name: 'Home',
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
-  }
+    import(/* webpackChunkName: "home" */ "../views/Home.vue"),
+    children:[
+      {
+        path:'/',
+        redirect:'dayjs'
+      },
+      {
+        path:'dayjs',
+        name:'DayJs',
+        component:() =>import(/* webpackChunkName: "DayJs" */ "../components/DayJs.vue"),
+      },{
+        path:'selectall/one',
+        name:'SelectAll',
+        component:() =>import(/* webpackChunkName: "SelectAll" */ "../components/SelectAll.vue"),
+      },{
+        path:'selectall/two',
+        name:'SelectAll1',
+        component:() =>import(/* webpackChunkName: "SelectAll1" */ "../components/SelectAll1.vue"),
+      }
+    ]
+  },
 ];
 
 const router = new VueRouter({
