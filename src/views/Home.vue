@@ -20,9 +20,9 @@
               </el-menu-item-group>
             </el-submenu>
 
-            <el-menu-item index="3">
+            <el-menu-item index="/table">
               <i class="el-icon-document"></i>
-              <span slot="title">导航三</span>
+              <span slot="title">vxe-table</span>
             </el-menu-item>
             <el-menu-item index="4">
               <i class="el-icon-setting"></i>

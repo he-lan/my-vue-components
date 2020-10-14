@@ -30,7 +30,13 @@ const routes = [
         path:'selectall/two',
         name:'SelectAll1',
         component:() =>import(/* webpackChunkName: "SelectAll1" */ "../components/SelectAll1.vue"),
-      }
+      },
+        {
+          path:'/table',
+          name:'VxeTable',
+          component:() =>import(/* webpackChunkName: "SelectAll1" */ "../components/table.vue"),
+        }
+   
     ]
   },
 ];
