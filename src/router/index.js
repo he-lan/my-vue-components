@@ -32,9 +32,19 @@ const routes = [
         component:() =>import(/* webpackChunkName: "SelectAll1" */ "../components/SelectAll1.vue"),
       },
         {
-          path:'/table',
-          name:'VxeTable',
-          component:() =>import(/* webpackChunkName: "SelectAll1" */ "../components/table.vue"),
+          path:'/table/hasPage',
+          name:'TableHasPage',
+          component:() =>import(/* webpackChunkName: "SelectAll1" */ "../components/TableHasPage.vue"),
+        },
+        {
+          path:'/table/hasNoPage',
+          name:'TableHasNoPage',
+          component:() =>import(/* webpackChunkName: "SelectAll1" */ "../components/TableHasNoPage.vue"),
+        },
+        {
+          path:'/dynamicTable',
+          name:'DynamicTable',
+          component:()=>import("../components/DynamicTable")
         }
    
     ]

@@ -13,6 +13,7 @@ import {
     Select,
     Option,
     DatePicker,
+    Popover,
  } from "element-ui";
 import "./element-varibles.scss";
 Vue.use(Input);
@@ -28,3 +29,4 @@ Vue.use(Main);
 Vue.use(Select);
 Vue.use(Option);
 Vue.use(DatePicker);
+Vue.use(Popover)
