@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    import SelectAllTwo from './subComponents/SelectAllTwo'
+    import SelectAllTwo from '../components/SelectAllTwo'
     export default {
         name: 'SelectAll1',
         components:{

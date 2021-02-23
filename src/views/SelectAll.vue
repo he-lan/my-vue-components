@@ -2,13 +2,13 @@
     <div class="wrapper">
       <select-all-one v-model="select" :child-options="options" ></select-all-one>
       <div>
-          <li v-for="(item,index) in filterArr" :key="index" >{{item.label,'--------'}} </li>
+          <li v-for="(item,index) in filterArr" :key="index" >{{item.label+'-----'}} </li>
       </div>
     </div>
 </template>
 
 <script>
-    import SelectAllOne from './subComponents/SelectAllOne'
+    import SelectAllOne from '../components/SelectAllOne'
     export default {
         name: 'SelectAll',
         components:{
@@ -39,7 +39,7 @@
         watch:{
             select:{
                 handler(newVal){
-                    this.filterArr = this.options.filter((item, i) => {
+                    this.filterArr = this.options.filter((item) => {
                     if (newVal.includes(item.value)) {
                         return item;
                     }

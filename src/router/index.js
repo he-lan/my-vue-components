@@ -14,6 +14,7 @@ const routes = [
     component: () =>
     import(/* webpackChunkName: "home" */ "../views/Home.vue"),
     children:[
+   
       {
         path:'/',
         redirect:'dayjs'
@@ -21,30 +22,36 @@ const routes = [
       {
         path:'dayjs',
         name:'DayJs',
-        component:() =>import(/* webpackChunkName: "DayJs" */ "../components/DayJs.vue"),
-      },{
+        component:() =>import(/* webpackChunkName: "DayJs" */ "../views/DayJs.vue"),
+      },
+      {
+        path:'echarts',
+        name:'Echarts',
+        component:() =>import(/* webpackChunkName: "Echarts" */ "../views/Echarts.vue"),
+      },
+      {
         path:'selectall/one',
         name:'SelectAll',
-        component:() =>import(/* webpackChunkName: "SelectAll" */ "../components/SelectAll.vue"),
+        component:() =>import(/* webpackChunkName: "SelectAll" */ "../views/SelectAll.vue"),
       },{
         path:'selectall/two',
         name:'SelectAll1',
-        component:() =>import(/* webpackChunkName: "SelectAll1" */ "../components/SelectAll1.vue"),
+        component:() =>import(/* webpackChunkName: "SelectAll1" */ "../views/SelectAll1.vue"),
       },
         {
           path:'/table/hasPage',
           name:'TableHasPage',
-          component:() =>import(/* webpackChunkName: "SelectAll1" */ "../components/TableHasPage.vue"),
+          component:() =>import(/* webpackChunkName: "TableHasPage" */ "../views/TableHasPage.vue"),
         },
         {
           path:'/table/hasNoPage',
           name:'TableHasNoPage',
-          component:() =>import(/* webpackChunkName: "SelectAll1" */ "../components/TableHasNoPage.vue"),
+          component:() =>import(/* webpackChunkName: "TableHasNoPage" */ "../views/TableHasNoPage.vue"),
         },
         {
           path:'/dynamicTable',
           name:'DynamicTable',
-          component:()=>import("../components/DynamicTable")
+          component:()=>import(/* webpackChunkName: "DynamicTable" */"../views/DynamicTable")
         }
    
     ]

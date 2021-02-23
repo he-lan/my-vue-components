@@ -9,6 +9,10 @@
             class="el-menu-vertical-demo"
             @select="select"
           >
+          <el-menu-item index="/echarts">
+              <i class="el-icon-goods"></i>
+              <span slot="title">echarts图</span>
+            </el-menu-item>
             <el-menu-item index="/dayjs">
               <i class="el-icon-goods"></i>
               <span slot="title">DayJs</span>
@@ -101,22 +105,23 @@ export default {
   flex-direction: column;
 
   .el-header {
-    background-color: #b3c0d1;
+    background-color: white;
     color: #333;
     line-height: 60px;
     flex: 0 0 60px;
+    border-bottom: 1px solid rgb(228, 224, 224);
   }
 
   .main-container {
     flex: 1;
 
     .el-aside {
-      background-color: #d3dce6;
+      background-color: white;
       color: #333;
       text-align: center;
 
       .el-menu {
-        background-color: #d3dce6;
+       
 
         /deep/ .el-menu-item {
           padding-left: 30px !important;
@@ -134,7 +139,6 @@ export default {
       }
 
       .el-submenu {
-        background-color: #d3dce6;
         padding-left: 0px !important;
 
         /deep/ .el-submenu__title {
@@ -163,7 +167,8 @@ export default {
     }
 
     .el-main {
-      background-color: #e9eef3;
+         background-color: #F6F5FA;
+
       color: #333;
       text-align: center;
     }

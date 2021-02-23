@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    import NoPage from './subComponents/NoPage.vue'
+    import NoPage from '../components/NoPage.vue'
     export default {
         components: {
             NoPage,

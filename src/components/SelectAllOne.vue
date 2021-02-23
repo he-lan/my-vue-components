@@ -14,11 +14,15 @@
         props:{
             childOptions:{
                 type:Array,
-                default:[]
+                default:function(){
+                    []
+                }
             },
             value:{
                 type:Array,
-                default:[]
+                 default:function(){
+                    []
+                }
             }
         },
         data(){
@@ -29,7 +33,7 @@
         },
         watch:{
             childOptions:{
-                handler(newVal){
+                handler(){
                     this.optionSelected=this.childOptions.map(item=>item.value)
                     this.selectChild=['all', ...this.optionSelected]
                 },
